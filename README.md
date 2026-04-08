@@ -1,2 +1,2 @@
-# zodyl.github.io
+Jihan Domanais
 this is my first project
