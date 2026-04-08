@@ -1,2 +1,2 @@
 Jihan Domanais
-this is my first project
+and this is my first project
