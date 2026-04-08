@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIHAN.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <!-- ─── MODAL ─── -->
+    <div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div class="modal-logo">JIHAN<span>.</span></div>
+        </div>
+    </div>
+
+    <!-- early script so toggleMode is always defined -->
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('light');
+            var icon = document.getElementById('theme-icon');
+            if (icon) icon.textContent = document.body.classList.contains('light') ? '☾' : '☀';
+        }
+    </script>
+
+    <!-- ─── NAVBAR ─── -->
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="#">JIHAN<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-theme" onclick="toggleMode()" title="Toggle theme"><span id="theme-icon">☀</span></button>
+                <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <ul class="mobile-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ─── MAIN: About ─── -->
+    <main id="about">
+        <div class="hero-wrapper">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <p class="section-label">About me</p>
+                    <h1 class="section-title">Hi, I'm<br><span class="dim">Jihan</span><span class="accent-dot">.</span></h1>
+                    <p class="hero-desc">I'm 20 years old and a 1st year BSIT student at Pamantasan ng Lungsod ng Muntinlupa. A beginner programmer with basic knowledge in C++, HTML, and CSS.</p>
+                    <div class="hero-meta">
+                        <div class="meta-item"><span class="dot"></span><span><strong>Age:</strong> 20 years old</span></div>
+                        <div class="meta-item"><span class="dot"></span><span><strong>Course:</strong> BS Information Technology — 1st Year</span></div>
+                        <div class="meta-item"><span class="dot"></span><span><strong>School:</strong> Pamantasan ng Lungsod ng Muntinlupa</span></div>
+                        <div class="meta-item"><span class="dot"></span><span><strong>Skills:</strong> C++, HTML, CSS</span></div>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="avatar">J</div>
+                    <h3>Jihan Domanais</h3>
+                    <p>Beginner Programmer · BSIT Student</p>
+                    <span class="status-badge">Available for work</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ─── SECTION: Skills ─── -->
+    <section id="skills" class="skills-section">
+        <div class="skills-wrapper">
+            <p class="section-label fade-up">What I know</p>
+            <h2 class="section-title fade-up">My Skills<span style="color:var(--accent)">.</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card fade-up">
+                    <div class="skill-icon">🌐</div>
+                    <h4>HTML & CSS</h4>
+                    <p>Building structured, semantic pages with clean and responsive styling.</p>
+                    <div class="skill-bar-wrap"><div class="skill-bar" data-width="30%"></div></div>
+                </div>
+                <div class="skill-card fade-up">
+                    <div class="skill-icon">⚡</div>
+                    <h4>JavaScript</h4>
+                    <p>Adding interactivity, logic, and dynamic behavior to web pages.</p>
+                    <div class="skill-bar-wrap"><div class="skill-bar" data-width="20%"></div></div>
+                </div>
+                <div class="skill-card fade-up">
+                    <div class="skill-icon">🖥️</div>
+                    <h4>C++</h4>
+                    <p>Fundamental programming logic, loops, functions, and console apps.</p>
+                    <div class="skill-bar-wrap"><div class="skill-bar" data-width="60%"></div></div>
+                </div>
+                <div class="skill-card fade-up">
+                    <div class="skill-icon">📱</div>
+                    <h4>Responsive Design</h4>
+                    <p>Making websites look great on all screen sizes and devices.</p>
+                    <div class="skill-bar-wrap"><div class="skill-bar" data-width="70%"></div></div>
+                </div>
+                <div class="skill-card fade-up">
+                    <div class="skill-icon">🎨</div>
+                    <h4>UI Design</h4>
+                    <p>Designing clean, user-friendly interfaces with a strong eye for detail.</p>
+                    <div class="skill-bar-wrap"><div class="skill-bar" data-width="65%"></div></div>
+                </div>
+                <div class="skill-card fade-up">
+                    <div class="skill-icon">🔧</div>
+                    <h4>Dev Tools</h4>
+                    <p>Comfortable with VS Code, browser devtools, and basic Git usage.</p>
+                    <div class="skill-bar-wrap"><div class="skill-bar" data-width="55%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── ASIDE + PROJECTS ─── -->
+    <div class="content-row">
+
+        <aside id="sidebar">
+            <div class="aside-card fade-up">
+                <span class="aside-label">Availability</span>
+                <span class="status-badge">Available for work</span>
+                <p class="aside-note">Open to internships, collabs, and school projects.</p>
+            </div>
+            <div class="aside-card fade-up">
+                <span class="aside-label">Languages</span>
+                <ul class="aside-list">
+                    <li><span class="lang-dot"></span> Filipino <span class="tag">Native</span></li>
+                    <li><span class="lang-dot"></span> English <span class="tag">Conversational</span></li>
+                </ul>
+            </div>
+            <div class="aside-card fade-up">
+                <span class="aside-label">Currently Learning</span>
+                <ul class="aside-list">
+                    <li><span class="lang-dot accent"></span> JavaScript</li>
+                    <li><span class="lang-dot accent"></span> Responsive Design</li>
+                    <li><span class="lang-dot accent"></span> Git & GitHub</li>
+                </ul>
+            </div>
+            <div class="aside-card fade-up">
+                <span class="aside-label">Fun Facts</span>
+                <ul class="aside-list">
+                    <li>🎓 1st year BSIT student</li>
+                    <li>💻 Started coding recently</li>
+                    <li>📍 Based in Muntinlupa</li>
+                </ul>
+            </div>
+        </aside>
+
+        <section id="projects" class="projects-section">
+            <div class="projects-inner">
+                <p class="section-label fade-up">What I've built</p>
+                <h2 class="section-title fade-up">Projects<span style="color:var(--accent)">.</span></h2>
+                <div class="projects-grid">
+                    <div class="project-card fade-up">
+                        <div class="project-top"><span class="project-icon">🌐</span><span class="project-tag">HTML & CSS</span></div>
+                        <h3>Personal Portfolio</h3>
+                        <p>My first personal portfolio website built using HTML and CSS. Showcases my info, skills, and contact details.</p>
+                        <div class="project-footer"><span class="chip">HTML</span><span class="chip">CSS</span></div>
+                    </div>
+                    <div class="project-card fade-up add-project">
+                        <div class="project-top"><span class="project-icon">➕</span></div>
+                        <h3>More coming soon</h3>
+                        <p>Currently working on new projects as I continue learning. Stay tuned!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ─── FOOTER: Contact ─── -->
+    <footer id="contact">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand fade-up">
+                    <div class="logo-text">JIHAN<span>.</span></div>
+                    <p>Open to collaborations, projects, and new opportunities. Feel free to reach out!</p>
+                </div>
+                <div class="footer-contact fade-up">
+                    <h4>Contact Me</h4>
+                    <div class="contact-links">
+                        <a class="contact-link" href="#" onclick="navigator.clipboard.writeText('jihandomanais0@gmail.com');alert('Email copied!')">
+                            <div class="contact-icon icon-gmail">✉</div>
+                            <span>jihandomanais0gmail.com</span>
+                        </a>
+                        <a class="contact-link" href="https://instagram.com/jihan110505" target="_blank">
+                            <div class="contact-icon icon-insta">📸</div>
+                            <span>@jihan110505</span>
+                        </a>
+                        <a class="contact-link" href="https://www.facebook.com/jihan.domanais.3" target="_blank">
+                            <div class="contact-icon icon-fb">f</div>
+                            <span>Jihan Domanais</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 Jihan Domanais. All rights reserved.</span>
+                <span>Built with HTML, CSS &amp; JS</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Modal
+        function openModal(tab) {
+            document.getElementById('modal-overlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            switchTab(tab || 'login');
+        }
+        function closeModal() {
+            document.getElementById('modal-overlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function handleOverlayClick(e) {
+            if (e.target === document.getElementById('modal-overlay')) closeModal();
+        }
+        function switchTab(tab) {
+            document.querySelectorAll('.modal-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.getElementById('tab-' + tab).classList.add('active');
+            document.getElementById('content-' + tab).classList.add('active');
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav-toggle').checked = false;
+            });
+        });
+
+        // Active nav highlight on scroll
+        const sections = document.querySelectorAll('[id]');
+        const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => {
+                if (window.scrollY >= s.offsetTop - 80) current = s.getAttribute('id');
+            });
+            navLinks.forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href') === '#' + current) link.style.color = 'var(--text)';
+            });
+        });
+
+        // Scroll animations + skill bars
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    const bar = entry.target.querySelector('.skill-bar');
+                    if (bar) bar.style.width = bar.dataset.width;
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
